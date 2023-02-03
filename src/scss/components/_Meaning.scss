@@ -1,0 +1,113 @@
+@forward "../variables";
+@use "../utils" as u;
+
+.meaning {
+  padding-block-start: u.rem(60);
+
+  &__word-container {
+    margin-block-end: u.rem(40);
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+  }
+
+  &__word {
+    font-size: u.fluid(320px, 1440px, 40px, 60px);
+    font-weight: var(--fw-bold);
+    line-height: 1;
+    margin-block-end: u.rem(20);
+  }
+
+  &__phonetic {
+    // font-weight: var(--fw-bold);
+    font-size: u.fluid(320px, 1440px, 18px, 20px);
+    color: var(--clr-violet);
+  }
+
+  &__play-sound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-violet-light);
+    width: u.rem(60);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &__icon {
+      color: var(--clr-violet);
+      height: u.rem(30);
+      width: u.rem(30);
+    }
+  }
+  &__source {
+    padding-block-end: u.rem(140);
+
+    &__divider {
+      height: 2px;
+      width: 100%;
+      background-color: var(--clr-gray-light);
+      margin-block-end: u.rem(20);
+    }
+
+    &__title {
+      font-size: u.fluid(320px, 1440px, 14px, 16px);
+      color: var(--clr-gray);
+    }
+  }
+}
+
+.part-of-speech {
+  &__divider {
+    display: flex;
+    place-items: center;
+    height: 2px;
+    width: 100%;
+    background-color: var(--clr-gray-light);
+    margin-block-end: u.rem(35);
+  }
+
+  &__title {
+    text-transform: lowercase;
+    font-weight: var(--fw-bold);
+    font-size: u.fluid(320px, 1440px, 20px, 22px);
+    background-color: var(--clr-white);
+    padding-inline-end: u.rem(30);
+    line-height: 1;
+    top: 0;
+    left: 0;
+  }
+
+  &__definition {
+    margin-block-end: u.rem(40);
+
+    &__sub-title {
+      font-size: u.fluid(320px, 1440px, 16px, 18px);
+      color: var(--clr-gray);
+      text-transform: capitalize;
+      padding-block-end: u.rem(20);
+    }
+    &__list {
+      margin-block-end: u.rem(30);
+      & li {
+        margin-inline-start: u.rem(40);
+        margin-block-end: u.rem(10);
+        font-size: u.fluid(320px, 1440px, 16px, 18px);
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+.synonyms {
+  display: flex;
+  flex-flow: row wrap;
+  gap: u.rem(30);
+  margin-inline-start: u.rem(40);
+
+  & p {
+    color: var(--clr-violet);
+    font-weight: var(--fw-bold);
+    font-size: u.fluid(320px, 1440px, 16px, 18px);
+  }
+}

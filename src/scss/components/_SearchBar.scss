@@ -1,0 +1,28 @@
+@forward "../variables";
+@use "../utils" as u;
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  width: u.fluid(320px, 1440px, 280px, 840px);
+  height: u.rem(40);
+  border-radius: 5px;
+  background-color: var(--clr-gray-light);
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline: transparent;
+    border: none;
+    padding: u.rem(20);
+  }
+
+  &__icon {
+    height: u.rem(20);
+    width: u.rem(20);
+    color: var(--clr-violet);
+    margin: u.rem(10);
+  }
+}

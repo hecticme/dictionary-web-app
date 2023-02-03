@@ -1,2 +1,13 @@
 @forward "reset";
 @forward "./components";
+@use "utils" as u;
+
+body {
+  font-family: var(--font-main);
+  color: var(--clr-black);
+}
+
+.app {
+  width: u.fluid(320px, 1440px, 280px, 840px);
+  margin-inline: auto;
+}

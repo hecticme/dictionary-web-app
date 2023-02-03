@@ -1,0 +1,22 @@
+@forward "../variables";
+@use "../utils" as u;
+
+.control-bar {
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+  padding-block: u.rem(60);
+  height: u.rem(80);
+}
+
+.icon {
+  height: u.rem(20);
+  width: u.rem(20);
+}
+
+.btns {
+  display: flex;
+  justify-content: flex-end;
+  place-items: center;
+  gap: u.rem(10);
+}
