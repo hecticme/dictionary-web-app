@@ -25,4 +25,16 @@
     color: var(--clr-violet);
     margin: u.rem(10);
   }
+
+  &__result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__word {
+      background-color: var(--clr-white);
+      height: u.rem(120);
+      width: 100%;
+    }
+  }
 }

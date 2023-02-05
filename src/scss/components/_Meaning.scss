@@ -18,28 +18,61 @@
     margin-block-end: u.rem(20);
   }
 
-  &__phonetic {
-    // font-weight: var(--fw-bold);
-    font-size: u.fluid(320px, 1440px, 18px, 20px);
-    color: var(--clr-violet);
+  &__phonetics {
+    display: flex;
+    gap: u.rem(20);
   }
 
-  &__play-sound {
+  &__phonetic {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--clr-violet-light);
-    width: u.rem(60);
-    aspect-ratio: 1;
-    border-radius: 50%;
-    cursor: pointer;
+    gap: u.rem(10);
+
+    &__text {
+      font-size: u.fluid(320px, 1440px, 18px, 20px);
+      color: var(--clr-violet);
+    }
+
+    &__audio {
+      display: flex;
+      justify-content: center;
+      place-items: center;
+    }
 
     &__icon {
-      color: var(--clr-violet);
-      height: u.rem(30);
-      width: u.rem(30);
+      height: u.fluid(320px, 1440px, 16px, 20px);
+      width: u.fluid(320px, 1440px, 16px, 20px);
+      cursor: pointer;
+      transition: transform 200ms var(--transition-bezier);
+
+      &:is(:hover, :active) {
+        transform: scale(1.2);
+      }
     }
   }
+
+  &__etymology {
+    display: flex;
+    gap: u.rem(10);
+    place-items: center;
+    margin-block-end: u.rem(30);
+
+    &__text {
+      font-size: u.fluid(320px, 1440px, 22px, 24px);
+      font-weight: var(--fw-bold);
+    }
+
+    &__number {
+      display: flex;
+      justify-content: center;
+      place-items: center;
+      font-weight: var(--fw-bold);
+      height: u.rem(30);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: var(--clr-violet-light);
+    }
+  }
+
   &__source {
     padding-block-end: u.rem(140);
 
@@ -53,11 +86,22 @@
     &__title {
       font-size: u.fluid(320px, 1440px, 14px, 16px);
       color: var(--clr-gray);
+
+      & a {
+        padding-inline-start: u.rem(10);
+        color: var(--clr-violet);
+
+        &:is(:hover, :active) {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }
 
 .part-of-speech {
+  margin-inline-start: u.rem(20);
+
   &__divider {
     display: flex;
     place-items: center;
@@ -110,4 +154,8 @@
     font-weight: var(--fw-bold);
     font-size: u.fluid(320px, 1440px, 16px, 18px);
   }
+}
+
+.arrow-up-icon {
+  margin-inline-start: u.rem(5);
 }
