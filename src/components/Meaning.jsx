@@ -25,7 +25,7 @@ export function Meaning({ data }) {
                       <div className="meaning__phonetic__audio">
                         <audio
                           id={"sound" + index}
-                          src="https://api.dictionaryapi.dev/media/pronunciations/en/plane-us.mp3"
+                          src={filteredPhonetic.audio}
                         ></audio>
                         <BsFillVolumeUpFill
                           className="meaning__phonetic__icon"

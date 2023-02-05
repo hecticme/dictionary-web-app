@@ -8,7 +8,9 @@ function App() {
   const [data, setData] = useState([]);
 
   const getWord = () => {
-    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${searchInput}`)
+    fetch(
+      `https://api.dictionaryapi.dev/api/v2/entries/en/${searchInput.trim()}`
+    )
       .then((res) => {
         if (res.ok === true) {
           return res.json();
