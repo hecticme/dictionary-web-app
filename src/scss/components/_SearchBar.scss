@@ -1,12 +1,24 @@
 @forward "../variables";
 @use "../utils" as u;
 
+.search-bar-container {
+  width: u.fluid(320px, 1440px, 280px, 840px);
+  height: u.rem(40);
+}
+
+.no-matches {
+  color: red;
+  margin-inline-start: u.rem(20);
+  margin-block-start: u.rem(8);
+  font-size: u.fluid(320px, 1440px, 14px, 16px);
+}
+
 .search-bar {
   display: flex;
   justify-content: center;
   place-items: center;
-  width: u.fluid(320px, 1440px, 280px, 840px);
-  height: u.rem(40);
+  width: 100%;
+  height: 100%;
   border-radius: 5px;
   background-color: var(--clr-gray-light);
 
@@ -24,17 +36,5 @@
     width: u.rem(20);
     color: var(--clr-violet);
     margin: u.rem(10);
-  }
-
-  &__result {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    &__word {
-      background-color: var(--clr-white);
-      height: u.rem(120);
-      width: 100%;
-    }
   }
 }

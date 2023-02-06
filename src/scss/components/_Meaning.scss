@@ -41,6 +41,7 @@
     &__icon {
       height: u.fluid(320px, 1440px, 16px, 20px);
       width: u.fluid(320px, 1440px, 16px, 20px);
+      color: var(--clr-violet);
       cursor: pointer;
       transition: transform 200ms var(--transition-bezier);
 
@@ -149,8 +150,14 @@
   gap: u.rem(30);
   margin-inline-start: u.rem(40);
 
-  & p {
+  &--found {
     color: var(--clr-violet);
+    font-weight: var(--fw-bold);
+    font-size: u.fluid(320px, 1440px, 16px, 18px);
+  }
+
+  &--none {
+    color: var(--clr-gray);
     font-weight: var(--fw-bold);
     font-size: u.fluid(320px, 1440px, 16px, 18px);
   }

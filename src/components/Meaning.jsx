@@ -68,11 +68,13 @@ export function Meaning({ data }) {
                         Synonyms
                       </h4>
                       <div className="synonyms">
-                        {!meaning.synonyms ? (
-                          <p>Oops! We have no synonyms for this word.</p>
+                        {meaning.synonyms.length == 0 ? (
+                          <p className="synonyms--none">
+                            Oops! We have no synonyms for this one.
+                          </p>
                         ) : (
                           meaning.synonyms.map((synonym) => {
-                            return <p>{synonym}</p>;
+                            return <p className="synonyms--found">{synonym}</p>;
                           })
                         )}
                       </div>
