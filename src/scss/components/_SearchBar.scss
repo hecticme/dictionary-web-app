@@ -2,7 +2,6 @@
 @use "../utils" as u;
 
 .search-bar-container {
-  width: u.fluid(320px, 1440px, 280px, 840px);
   height: u.rem(40);
 }
 
@@ -36,5 +35,13 @@
     width: u.rem(20);
     color: var(--clr-violet);
     margin: u.rem(10);
+  }
+}
+
+.search-bar.dark {
+  background-color: var(--clr-black-med);
+
+  & .search-bar__input {
+    color: var(--clr-white);
   }
 }

@@ -1,15 +1,23 @@
-export function ToggleBtn(props) {
-  const changeBtnStyle = () => {
-    const toggleBtn = document.querySelector(".toggle-btn");
-    toggleBtn.classList.toggle("dark");
-  };
+import { useTheme } from "../contexts/ThemeContext";
+import { useEffect } from "react";
+
+export function ToggleBtn() {
+  const [darkTheme, toggleTheme] = useTheme();
+
+  // Change body background color by adding class
+  useEffect(() => {
+    if (darkTheme) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+  }, [darkTheme]);
 
   return (
     <div
-      className="toggle-btn"
+      className={`toggle-btn ${darkTheme ? "dark" : ""}`}
       onClick={() => {
-        props.onClick();
-        changeBtnStyle();
+        toggleTheme();
       }}
     >
       <div className="toggle-btn__circle"></div>

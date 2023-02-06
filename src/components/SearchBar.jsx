@@ -1,13 +1,16 @@
 import { HiOutlineSearch } from "react-icons/hi";
+import { useTheme } from "../contexts/ThemeContext";
 
 export function SearchBar({ searchInput, setSearchInput, noMatches }) {
   const handleChange = (e) => {
     setSearchInput(e.target.value);
   };
 
+  const [darkTheme] = useTheme();
+
   return (
     <div className="search-bar-container">
-      <div className="search-bar">
+      <div className={`search-bar ${darkTheme ? "dark" : ""}`}>
         <input
           type="search"
           className="search-bar__input"

@@ -63,6 +63,7 @@
     }
 
     &__number {
+      color: var(--clr-black);
       display: flex;
       justify-content: center;
       place-items: center;
@@ -165,4 +166,12 @@
 
 .arrow-up-icon {
   margin-inline-start: u.rem(5);
+}
+
+.meaning.dark {
+  & .part-of-speech {
+    &__title {
+      background-color: var(--clr-black);
+    }
+  }
 }

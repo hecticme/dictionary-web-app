@@ -3,14 +3,10 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { FiMoon } from "react-icons/fi";
 import { ToggleBtn } from "./ToggleBtn";
 import { ImSun } from "react-icons/im";
-import { useState } from "react";
+import { useTheme } from "../contexts/ThemeContext";
 
 export function ControlBar() {
-  const [darkTheme, setDarkTheme] = useState(false);
-
-  const toggleTheme = () => {
-    setDarkTheme((prev) => !prev);
-  };
+  const [darkTheme] = useTheme();
 
   return (
     <div className="control-bar">
@@ -21,7 +17,7 @@ export function ControlBar() {
           <MdOutlineKeyboardArrowDown className="icon" />
         </div>
         <div className="btns__toggle-theme">
-          <ToggleBtn onClick={toggleTheme} />
+          <ToggleBtn />
 
           {darkTheme ? <FiMoon className="icon" /> : <ImSun className="icon" />}
         </div>

@@ -1,11 +1,13 @@
 import { BsFillVolumeUpFill, BsBoxArrowUpRight } from "react-icons/bs";
+import { useTheme } from "../contexts/ThemeContext";
 
 export function Meaning({ data }) {
-  let result;
+  const [darkTheme] = useTheme();
 
+  let result;
   if (Array.isArray(data) && !data.length == 0) {
     result = (
-      <div className="meaning">
+      <div className={`meaning ${darkTheme ? "dark" : ""}`}>
         <div className="meaning__word-container">
           <div>
             <h1 className="meaning__word">{data[0].word}</h1>
