@@ -55,7 +55,7 @@
     display: flex;
     gap: u.rem(10);
     place-items: center;
-    margin-block-end: u.rem(30);
+    margin-block-end: u.rem(40);
 
     &__text {
       font-size: u.fluid(320px, 1440px, 22px, 24px);
@@ -102,7 +102,7 @@
 }
 
 .part-of-speech {
-  margin-inline-start: u.rem(20);
+  margin-inline-start: u.rem(0);
 
   &__divider {
     display: flex;
