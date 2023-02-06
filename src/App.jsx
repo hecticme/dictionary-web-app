@@ -1,5 +1,5 @@
 import { ControlBar } from "./components/ControlBar";
-import { Meaning } from "./components/Meaning";
+import { Meaning } from "./components/Meaning/Meaning";
 import { SearchBar } from "./components/SearchBar";
 import { useState, useEffect } from "react";
 import axios from "axios";
