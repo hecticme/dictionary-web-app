@@ -28,6 +28,10 @@
 .toggle-btn.dark {
   background-color: var(--clr-white);
 
+  &:is(:hover, :active) {
+    box-shadow: rgba(255, 255, 255, 0.65) 0px 7px 29px 0px;
+  }
+
   .toggle-btn__circle {
     background-color: var(--clr-black);
     border: u.rem(3) solid var(--clr-white);
