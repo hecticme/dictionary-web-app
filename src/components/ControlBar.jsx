@@ -13,9 +13,6 @@ export function ControlBar() {
       <BiBook className="icon page-logo" />
 
       <div className="btns">
-        <div className="btns__change-font">
-          <MdOutlineKeyboardArrowDown className="icon" />
-        </div>
         <div className="btns__toggle-theme">
           <ToggleBtn />
 
