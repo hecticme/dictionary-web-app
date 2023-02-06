@@ -1,4 +1,5 @@
 import { HiOutlineSearch } from "react-icons/hi";
+import { IoIosCloseCircle } from "react-icons/io";
 import { useTheme } from "../contexts/ThemeContext";
 
 export function SearchBar({ searchInput, setSearchInput, noMatches }) {
@@ -18,7 +19,16 @@ export function SearchBar({ searchInput, setSearchInput, noMatches }) {
           value={searchInput}
           onChange={(e) => handleChange(e)}
         />
-        <HiOutlineSearch className="search-bar__icon" />
+        {searchInput ? (
+          <IoIosCloseCircle
+            className="search-bar__icon clear"
+            onClick={() => {
+              setSearchInput("");
+            }}
+          />
+        ) : (
+          <HiOutlineSearch className="search-bar__icon" />
+        )}
       </div>
       {noMatches && <p className="no-matches">No definitions match.</p>}
     </div>

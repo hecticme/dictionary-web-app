@@ -31,10 +31,19 @@
   }
 
   &__icon {
-    height: u.rem(20);
-    width: u.rem(20);
+    height: u.rem(26);
+    width: u.rem(26);
     color: var(--clr-violet);
-    margin: u.rem(10);
+    margin: u.rem(12);
+
+    &.clear {
+      cursor: pointer;
+      transition: transform 100ms var(--transition-bezier);
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 }
 
