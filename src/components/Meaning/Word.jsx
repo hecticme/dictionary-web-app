@@ -14,7 +14,7 @@ export function Word({ data }) {
             // Return the phonetic text
             .map((filteredPhonetic, index) => {
               return (
-                <div className="meaning__phonetic">
+                <div className="meaning__phonetic" key={index}>
                   <p className="meaning__phonetic__text">
                     {filteredPhonetic.text}
                   </p>
