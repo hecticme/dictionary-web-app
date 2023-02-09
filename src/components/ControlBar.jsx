@@ -1,8 +1,7 @@
 import { BiBook } from "react-icons/bi";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { FiMoon } from "react-icons/fi";
-import { ToggleBtn } from "./ToggleBtn";
 import { ImSun } from "react-icons/im";
+import { ToggleBtn } from "./ToggleBtn";
 import { useTheme } from "../contexts/ThemeContext";
 
 export function ControlBar() {
